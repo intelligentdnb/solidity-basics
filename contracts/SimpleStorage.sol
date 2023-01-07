@@ -6,8 +6,6 @@ contract SimpleStorage { //similar to a class
     // This gets initialized to zero
     uint256 favoriteNumber;
 
-    mapping(string => uint256) public nameToFavoriteNumber;
-
     struct People { // new type (boolean, string, uint256, etc)
         uint256 favoriteNumber;
         string name;
@@ -15,6 +13,8 @@ contract SimpleStorage { //similar to a class
     
     //uint256[] public favoriteNumberList;
     People[] public people;
+
+    mapping(string => uint256) public nameToFavoriteNumber;
 
     // This function gets a uint256 for argument and set it to uint256 favoriteNumber
     function store(uint256 _favoriteNumber) public {
